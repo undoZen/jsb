@@ -12,8 +12,7 @@ app.get(/\/.*/, function (req, res, next) {
     };
     doc = _.extend(
       {},
-      doc || {},
-      doc && doc.published ? {} : docNotFound
+      doc ? doc : docNotFound
     );
     res.render('index', doc);
   }

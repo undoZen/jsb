@@ -6,10 +6,10 @@ block content
     form
       textarea(id="content", style="width: 90%; height: 400px; margin: auto")!= content
       br
+      button(id="save") save
       label
-        span published
         - if (published)
           input(type="checkbox", id="published", checked)
         - else
           input(type="checkbox", id="published")
-      button(id="save") save
+        span published
