@@ -2,7 +2,8 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 
-var app = global.app = module.exports = exports = express();
+var config = GLOBAL.config = require('config');
+var app = GLOBAL.app = module.exports = exports = express();
 
 // all environments
 app.set('port', process.env.PORT || 1984);

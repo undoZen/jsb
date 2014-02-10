@@ -14,10 +14,7 @@
 
 var Datastore = require('nedb');
 
-var env = process.env.NODE_ENV || 'development';
-var path = '/var/jsb/database-' + env;
-
-var db = new Datastore({ filename: path, autoload: true });
+var db = new Datastore({ filename: config.dbPath, autoload: true });
 
 var Doc = exports.Doc = {};
 'find findOne insert update'.split(' ').forEach(function (method) {
